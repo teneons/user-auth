@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
 
 export default class SignIn extends Component {
   constructor(props) {
@@ -13,6 +12,8 @@ export default class SignIn extends Component {
     this.getEmailData = this.getEmailData.bind(this)
     this.getPasswordData = this.getPasswordData.bind(this)
   }
+
+
   
   getEmailData(e) {
     this.setState({email: e.target.value})
@@ -25,7 +26,6 @@ export default class SignIn extends Component {
   }
 
   render() {
-    console.log(this.state.password)
 
     const svgSgnIn = <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-door-open" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fillRule="evenodd" d="M1 15.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM11.5 2H11V1h.5A1.5 1.5 0 0 1 13 2.5V15h-1V2.5a.5.5 0 0 0-.5-.5z"/>
