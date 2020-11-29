@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-
+import {useHttp} from '../../hooks/hooks';
 
 const SignUp = () => {
- 
+  const {load, err, request, clearErr} = useHttp()    //use hook
 
   //use useState
   const [inputs, setInputData] = useState({firstName: '', lastName: '', email: '', password: ''})
@@ -12,7 +12,11 @@ const SignUp = () => {
     setInputData({...inputs, [e.target.name]: e.target.value})
   }
 
-
+  // const registerIn = async () => {
+  //   try {
+  //     const data = await request('/signup', POST, {})
+  //   } catch(e) {}
+  // }
 
 
   const sbgSgnUp = <svg width="1.2em" height="1.2em" viewBox="0 0 16 16" className="bi bi-ui-radios" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -30,22 +34,22 @@ const SignUp = () => {
         </div>
 
         <div className="col-md-10 mb-3">
-          <input type="text" className="form-control" name='fName' id="validationCustom01" placeholder='First name' required />
+          <input type="text" className="form-control" name='fName' onChange={getInputData} id="validationCustom01" placeholder='First name' required />
           <div className="valid-feedback fw-bold">Looks good</div>
         </div>
 
         <div className="col-md-10 mb-3">
-          <input type="text" className="form-control" name='lName' id="validationCustom01" placeholder='Last name' required />
+          <input type="text" className="form-control" name='lName' onChange={getInputData} id="validationCustom01" placeholder='Last name' required />
           <div className="valid-feedback fw-bold">Looks good</div>
         </div>
           
         <div className="col-md-10 mb-3">
-          <input type="email" className="form-control" name='email'  id="validationCustom02" placeholder='Email' required />
+          <input type="email" className="form-control" name='email' onChange={getInputData}  id="validationCustom02" placeholder='Email' required />
           <div className="valid-feedback">Looks good</div>
         </div>
 
         <div className="col-md-10 mb-3">
-          <input type="password" className="form-control" name='password' id="validationCustom05" placeholder='Password' required />
+          <input type="password" className="form-control" name='password' onChange={getInputData} id="validationCustom05" placeholder='Password' required />
           <div className="valid-feedback">Looks good</div>
         </div>
 
