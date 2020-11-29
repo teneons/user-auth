@@ -6,6 +6,8 @@ const authRouter = require('./routes/authRouter');
 
 const port = process.env.PORT || 3001
 
+app.use(express.json({extended: true}))
+
 //processing request by react
 app.use('/', authRouter)
 

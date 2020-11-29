@@ -16,6 +16,7 @@ router.post('/signup',
       check('password', 'Password is short').isLength({min: 8})
     ], 
     async (req, res) => {
+      console.log(`BODY ${req.body}`)
       try {
         //validation
         const err = validationResult(req)
