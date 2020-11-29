@@ -12,9 +12,10 @@ export default class SignIn extends Component {
   </svg>
 
     return (
-      <form>
+      <div className='d-flex justify-content-center'>
+      <form className='col-3'>
         <div className='d-flex justify-content-center m-2'>
-          <span className='display-6 text-white'>Sign <span className="badge bg-white text-secondary">In</span></span>
+          <span className='display-6 text-dark'>Sign <span className="badge bg-dark text-white">In</span></span>
         </div>
         <div className="mt-3 form-floating">
           <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Email address" />
@@ -25,9 +26,10 @@ export default class SignIn extends Component {
           <label htmlFor="floatingInputGrid">Password</label>
         </div>
         <div className='d-flex justify-content-center m-2'>
-          <button type="submit" className="btn btn-outline-light">Sign in{svgSgnIn}</button>
+          <button type="submit" className="btn btn-outline-dark">Sign in{svgSgnIn}</button>
         </div>
         </form>
+      </div>
     )
   }
 }
