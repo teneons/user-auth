@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import SignUp from '../SignUp/SignUp';
-import SignIn from '../SignIn/SignIn';
-
 
 export default class Body extends Component {
 

@@ -1,9 +1,13 @@
-import Body from '../Body/Body';
+import {BrowserRouter as Router} from 'react-router-dom';
+import {routes} from '../routes/routes';
 
 function App() {
+  const rts = routes(false)
   return (
     <div className="App">
-      <Body />
+      <Router>
+        {rts}
+      </Router>
     </div>
   );
 }
