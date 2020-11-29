@@ -12,11 +12,12 @@ const SignUp = () => {
     setInputData({...inputs, [e.target.name]: e.target.value})
   }
 
-  // const registerIn = async () => {
-  //   try {
-  //     const data = await request('/signup', POST, {})
-  //   } catch(e) {}
-  // }
+  const registerIn = async () => {
+    try {
+      const data = await request('/signup', 'POST', {...inputs})
+      console.log(data)
+    } catch(e) {}
+  }
 
 
   const sbgSgnUp = <svg width="1.2em" height="1.2em" viewBox="0 0 16 16" className="bi bi-ui-radios" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +63,7 @@ const SignUp = () => {
         </div>
 
         <div className="col-12 d-flex justify-content-center">
-          <button className="btn btn-outline-dark" type="submit">Sign up {sbgSgnUp}</button>
+          <button className="btn btn-outline-dark" type="button" onClick={registerIn}>Sign up {sbgSgnUp}</button>
         </div>
 
       </div>
