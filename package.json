@@ -10,8 +10,7 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "npm start --prefix client",
-    "full": "concurrently \"npm run server\" \"npm run client\" ",
-    "heroku-postbuild": "npm run full"
+    "full": "concurrently \"npm run server\" \"npm run client\" "
   },
   "keywords": [],
   "author": "",
