@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useHttp} from '../../hooks/hooks';
 
 const SignUp = () => {
-  const {load, err, request, cleanErr} = useHttp()    //use hook
+  const {err, request} = useHttp()    //use hook
 
   //use useState
   const [inputs, setInputData] = useState({firstName: '', lastName: '', email: '', password: ''})
@@ -14,7 +14,8 @@ const SignUp = () => {
 
   const registerIn = async () => {
     try {
-      const data = await request('/signup', 'POST', {...inputs})
+      //const data = 
+      await request('/signup', 'POST', {...inputs})
     } catch(e) {}
   }
 

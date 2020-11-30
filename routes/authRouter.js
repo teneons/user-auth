@@ -10,13 +10,12 @@ const secret = 'allegedly a very secret key';
 //sign UP
 router.post('/signup',
     [ 
-      check('firstName', 'Inputted wrong name').isEmpty(),
-      check('lastName', 'Inputted wrong name').isEmpty(),
+      check('firstName', 'Inputted wrong name'),
+      check('lastName', 'Inputted wrong name'),
       check('email', 'Wrong email').isEmail(),
       check('password', 'Password is short').isLength({min: 8})
     ], 
     async (req, res) => {
-      console.log(`BODY ${req.body}`)
       try {
         //validation
         const err = validationResult(req)

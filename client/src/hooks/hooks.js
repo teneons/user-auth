@@ -31,7 +31,5 @@ export const useHttp = () => {
 
   }, [])
 
-  const clearErr = () => setErr(null)
-
-  return {load, err, request, clearErr}
+  return {err, request}
 }

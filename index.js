@@ -2,14 +2,13 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 
-const authRouter = require('./routes/authRouter');
-
-const port = process.env.PORT || 3001
-
+//convert to json
 app.use(express.json({extended: true}))
 
 //processing request by react
-app.use('/', authRouter)
+app.use('/', require('./routes/authRouter'))
+
+const port = process.env.PORT || 3001
 
 //start server, connect mongo
 async function mongoStart() {
