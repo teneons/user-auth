@@ -14,6 +14,8 @@
   After that in cmd input - `cd client`
   - npm i
   - npm i react-router-dom
+  
+  Run project - **npm run full**
 
 + **Stack**
    - `JS [MERN stack]`
