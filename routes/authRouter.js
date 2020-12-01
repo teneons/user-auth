@@ -29,7 +29,7 @@ router.post('/signup',
         //check by email unique user
         const candidate = await ModelUser.findOne({email})
         if(candidate) {
-          return res.status(400).json({message: 'User with such email is exist'})
+          return res.status(200).json({message: 'User with such email is exist'})
         }
 
         //hash password
@@ -66,14 +66,14 @@ router.post('/signin',
       //check inputted data
       const user = await ModelUser.findOne({email})
       if(!user) {
-        return res.status(400).json({message: 'User not finded'})
+        return res.status(200).json({message: 'User not finded'})
       }
 
       //check - match password at DB
       const isMatch = await bcryptjs.compare(password, user.password)
 
       if(!isMatch) {
-        return res.status(400).json({message: 'Incorrect password'})
+        return res.status(200).json({message: 'Incorrect password'})
       }
 
       const token = jsonwebtoken.sign(

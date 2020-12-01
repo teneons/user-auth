@@ -17,7 +17,8 @@ const SignIn = () => {
   const signUp = async () => {
     try {
       const data = await request('/signin', 'POST', {...inputs})
-      setMsg(data.messages)
+      //console.log(data.message)
+      await setMsg(data.message)
     } catch(e) {}
   }
 
@@ -44,7 +45,7 @@ const SignIn = () => {
         <label htmlFor="floatingInputGrid">Password</label>
       </div>
       <div className='d-flex justify-content-center m-2'>
-        <button type="submit" className="btn btn-outline-dark" onClick={signUp}>Sign in{svgSgnIn}</button>
+        <button type="button" className="btn btn-outline-dark" onClick={signUp}>Sign in{svgSgnIn}</button>
       </div>
       </form>
     </div>
