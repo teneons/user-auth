@@ -27,8 +27,8 @@ const SignUp = () => {
 
   return (
     <div className='d-flex justify-content-center'>
-      <form className="row g-3 needs-validatio col-4" noValidate>
-      <div className="alert alert-dark" role="alert">{outMsg}</div>
+      <form className="row g-3 needs-validatio col-11 col-sm-10 col-md-7 col-lg-4" noValidate>
+      <div className="alert alert-dark text-center fw-bold" role="alert">{outMsg}</div>
       <div className='column'>
         <div className='d-flex justify-content-center m-2'>
           <span className='display-6 text-dark'>Sign <span className="badge bg-dark text-white">Up</span></span>

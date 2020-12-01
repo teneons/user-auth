@@ -31,8 +31,8 @@ const SignIn = () => {
 
   return (
     <div className='d-flex justify-content-center row'>
-    <div className="alert alert-dark" role="alert">{msg}</div>
-    <form className='col-3'>
+    <form className='col-10 col-sm-9 col-md-5 col-lg-3'>
+    <div className="alert alert-dark text-center fw-bold" role="alert">{msg}</div>
       <div className='d-flex justify-content-center m-2'>
         <span className='display-6 text-dark'>Sign <span className="badge bg-dark text-white">In</span></span>
       </div>
