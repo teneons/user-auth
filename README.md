@@ -7,6 +7,7 @@
 + **Description -** this project is embodiment user authentication built on stack MERN.
 + **How to run:**
   - npm i express mongoose
+  - npm i --save express-validator
   - npm i -D nodemon concurrently
   - npm i bcryptjs
   - npm i jsonwebtoken
