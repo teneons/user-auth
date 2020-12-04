@@ -17,7 +17,6 @@ const SignIn = () => {
   const signUp = async () => {
     try {
       const data = await request('/signin', 'POST', {...inputs})
-      //console.log(data.message)
       await setMsg(data.message)
     } catch(e) {}
   }
