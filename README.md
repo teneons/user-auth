@@ -6,15 +6,12 @@
 + **Project name -** `User auth`
 + **Description -** this project is embodiment user authentication built on stack MERN.
 + **How to run:**
+  - npm i
   - npm i express mongoose
-  - npm i --save express-validator
+  - npm i express-validator
   - npm i -D nodemon concurrently
   - npm i bcryptjs
   - npm i jsonwebtoken
-  
-  After that in cmd input - `cd client`
-  - npm i
-  - npm i react-router-dom
   
   Run project - **npm run full**
 
