@@ -59,6 +59,7 @@ const SignUp = () => {
         </div>
 
       </div>
+      <span className='text-dark text-center'>Already have an account? Then <a href='/signin' className='text-dark fw-bold'>sign in</a></span>
       </form>
       </div>
     )

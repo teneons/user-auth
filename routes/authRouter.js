@@ -20,7 +20,7 @@ router.post('/signup',
         //validation
         const err = validationResult(req)
         if(!err.isEmpty()) {
-          return res.status(200).json({err: err.array(), message: 'Incorrect data'})
+          return res.status(200).json({err: err.array(), message: 'Incorrect inputted data'})
         }
         
         
@@ -51,14 +51,15 @@ router.post('/signup',
 router.post('/signin',
   [
     check('email', 'Inputted wrong email').normalizeEmail().isEmail(),
-    check('password', 'Password is short').exists()
+    check('password', 'Password is short').isLength({min: 8})
   ],
   async (req, res) => {
+
     try {
       //validation
       const err = validationResult(req)
       if(!err.isEmpty()) {
-        return res.status(200).json({err: err.array(), message: 'Incorrect data'})
+        return res.status(200).json({err: err.array(), message: 'Incorrect inputted data'})
       }
       
       const {email, password} = req.body   //gets data at react
@@ -82,7 +83,7 @@ router.post('/signin',
         {expiresIn: '1h'}
       )
 
-      res.json({token, idUser: user.id})
+      res.json({token, idUser: user.id, firstName: user.firstName, lastName: user.lastName})
 
 
     } catch (e) {
