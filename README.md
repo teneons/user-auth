@@ -4,16 +4,10 @@
 
 
 + **Project name -** `User auth`
++ **Demo -** **[HERE](https://user---auth.herokuapp.com/)**
 + **Description -** this project is embodiment user authentication built on stack MERN.
 + **How to run:**
-  - npm i
-  - npm i express mongoose
-  - npm i express-validator
-  - npm i -D nodemon concurrently
-  - npm i bcryptjs
-  - npm i jsonwebtoken
-  
-  Run project - **npm run full**
+  - npm run magic
 
 + **Stack**
    - `JS [MERN stack]`

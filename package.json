@@ -4,9 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "installEngine": "npm i && cd client && npm i",
+    "instServer": "npm i",
+    "instClient": "cd client && npm i",
+    "installFiles": "npm run instServer && npm run instClient",
     "server": "nodemon index.js",
     "client": "cd client && npm start",
-    "full": "concurrently \"npm run server\" \"npm run client\" "
+    "full": "concurrently \"npm run server\" \"npm run client\" ",
+    "magic": "npm run installFiles && npm run full"
   },
   "keywords": [],
   "author": "",
