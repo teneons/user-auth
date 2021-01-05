@@ -19,9 +19,9 @@ async function mongoStart() {
       useCreateIndex: true
     })
 
-    app.listen(port, () => { console.log(`Sever has runned on port - ${port}`) })
+    app.listen(port, () => { consolelog(`Sever has runned on port - ${port}`) })
   } catch (e) {
-    console.log('ERROR - ${e}')
+    console.log(`ERROR - ${e}`)
     process.exit(1)   //exit with connect at error
   }
 }
